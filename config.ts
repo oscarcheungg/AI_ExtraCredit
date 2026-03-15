@@ -35,7 +35,7 @@ export const OWNER_NAME = "Oscar Cheung";
 
 export const WELCOME_MESSAGE = `Hey! I'm ${AI_NAME}, your beginner running coach—created by ${OWNER_NAME}. Whether you're lacing up for the first time or building a habit, I'm here to help with form, plans, and motivation. What would you like to work on today?`;
 
-export const CLEAR_CHAT_TEXT = "New run";
+export const CLEAR_CHAT_TEXT = "New chat";
 
 export const MODERATION_DENIAL_MESSAGE_SEXUAL = "I can't discuss explicit sexual content. Please ask something else.";
 export const MODERATION_DENIAL_MESSAGE_SEXUAL_MINORS = "I can't discuss content involving minors in a sexual context. Please ask something else.";
@@ -53,4 +53,4 @@ export const MODERATION_DENIAL_MESSAGE_VIOLENCE_GRAPHIC = "I can't discuss graph
 export const MODERATION_DENIAL_MESSAGE_DEFAULT = "Your message violates our guidelines. I can't answer that.";
 
 export const PINECONE_TOP_K = 40;
-export const PINECONE_INDEX_NAME = "my-ai";
+export const PINECONE_INDEX_NAME = "quickstart";

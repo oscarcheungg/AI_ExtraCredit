@@ -137,9 +137,9 @@ export default function Chat() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center font-sans dark:bg-black">
-      <main className="w-full dark:bg-black h-screen relative">
-        <div className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-background via-background/50 to-transparent dark:bg-black overflow-visible pb-16">
+    <div className="flex h-screen items-center justify-center font-sans bg-sky-100 dark:bg-indigo-950">
+      <main className="w-full h-screen relative bg-sky-100 dark:bg-indigo-950">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-sky-100/95 dark:bg-indigo-950/95 backdrop-blur-sm border-b border-sky-200/80 dark:border-indigo-800 overflow-visible pb-16">
           <div className="relative overflow-visible">
             <ChatHeader>
               <ChatHeaderBlock />
@@ -168,8 +168,8 @@ export default function Chat() {
             </ChatHeader>
           </div>
         </div>
-        <div className="h-screen overflow-y-auto px-5 py-4 w-full pt-[88px] pb-[150px]">
-          <div className="flex flex-col items-center justify-end min-h-full">
+        <div className="h-screen overflow-y-auto px-5 py-4 w-full pt-[88px] pb-[150px] bg-sky-100 dark:bg-indigo-950">
+          <div className="flex flex-col items-center justify-end min-h-full pb-12">
             {isClient ? (
               <>
                 <MessageWall messages={messages} status={status} durations={durations} onDurationChange={handleDurationChange} />
@@ -186,7 +186,7 @@ export default function Chat() {
             )}
           </div>
         </div>
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-linear-to-t from-background via-background/50 to-transparent dark:bg-black overflow-visible pt-13">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-sky-100/95 dark:bg-indigo-950/95 backdrop-blur-sm border-t border-sky-200/80 dark:border-indigo-800 overflow-visible pt-13">
           <div className="w-full px-5 pt-5 pb-1 items-center flex justify-center relative overflow-visible">
             <div className="message-fade-overlay" />
             <div className="max-w-3xl w-full">
