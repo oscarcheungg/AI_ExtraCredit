@@ -53,4 +53,5 @@ export const MODERATION_DENIAL_MESSAGE_VIOLENCE_GRAPHIC = "I can't discuss graph
 export const MODERATION_DENIAL_MESSAGE_DEFAULT = "Your message violates our guidelines. I can't answer that.";
 
 export const PINECONE_TOP_K = 40;
-export const PINECONE_INDEX_NAME = "quickstart";
+/** Set PINECONE_INDEX_NAME in .env.local to match an index in your Pinecone project (create one at https://app.pinecone.io if needed). */
+export const PINECONE_INDEX_NAME = (process.env.PINECONE_INDEX_NAME?.trim() || "llama-text-embed-v2-index");

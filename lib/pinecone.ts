@@ -39,6 +39,11 @@ export async function searchPinecone(
         return `< results > ${context} </results>`;
     } catch (error) {
         console.error('Pinecone search error:', error);
-        return `< results > Vector search failed: ${error instanceof Error ? error.message : 'Unknown error'}.</results>`;
+        const message = error instanceof Error ? error.message : 'Unknown error';
+        const is404 = message.includes('404') || (error as { cause?: { status?: number } })?.cause?.status === 404;
+        if (is404) {
+            return '< results > Pinecone index not found. Create an index at https://app.pinecone.io and set PINECONE_INDEX_NAME in .env.local to that index name.</results>';
+        }
+        return `< results > Vector search failed: ${message}.</results>`;
     }
 }
